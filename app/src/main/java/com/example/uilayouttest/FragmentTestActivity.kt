@@ -20,10 +20,10 @@ class FragmentTestActivity : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment)
     {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.fragRightLayout, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+//        val fragmentManager = supportFragmentManager
+//        val transaction = fragmentManager.beginTransaction()
+//        transaction.replace(R.id.fragRightLayout, fragment)
+//        transaction.addToBackStack(null)
+//        transaction.commit()
     }
 }

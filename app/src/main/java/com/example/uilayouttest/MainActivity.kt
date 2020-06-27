@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.uilayouttest.chat.ChatActivity
+import com.example.uilayouttest.news.NewsContentActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         btnFragActivity.setOnClickListener {
             startActivity(Intent(this, FragmentTestActivity::class.java))
+        }
+
+        btnNewsActivity.setOnClickListener {
+            startActivity(Intent(this, NewsContentActivity::class.java))
         }
     }
 }
