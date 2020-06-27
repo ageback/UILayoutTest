@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         btnChatActivity.setOnClickListener {
             startActivity(Intent(this, ChatActivity::class.java))
         }
+
+        btnFragActivity.setOnClickListener {
+            startActivity(Intent(this, FragmentTestActivity::class.java))
+        }
     }
 }
