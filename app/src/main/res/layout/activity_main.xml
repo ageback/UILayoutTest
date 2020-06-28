@@ -42,4 +42,18 @@
         android:id="@+id/btnNewsActivity"
         android:textAllCaps="false"
         android:text="News Demo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSendMyBroadcast"
+        android:textAllCaps="false"
+        android:text="发送My广播"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnForceOffline"
+        android:textAllCaps="false"
+        android:text="强制下线"/>
 </LinearLayout>
