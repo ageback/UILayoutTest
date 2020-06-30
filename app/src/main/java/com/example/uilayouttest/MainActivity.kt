@@ -67,6 +67,10 @@ class MainActivity : BaseActivity() {
             val intent = Intent("com.example.uilayouttest.FORCE_OFFLINE")
             sendBroadcast(intent)
         }
+
+        btnFilePersistence.setOnClickListener {
+            startActivity(Intent(this, FilePersistenceTestActivity::class.java))
+        }
     }
 
     override fun onDestroy() {
