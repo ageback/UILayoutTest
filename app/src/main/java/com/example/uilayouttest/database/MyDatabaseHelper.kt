@@ -13,16 +13,20 @@ class MyDatabaseHelper(val context: Context, name: String, version:Int):SQLiteOp
             "price real," +
             "pages integer," +
             "name text)"
-
+    private val createCategory = "create table Category(" +
+            "id integer primary key autoincrement," +
+            "category_name text," +
+            "category_code text)"
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(createBook)
+        db.execSQL(createCategory)
         Toast.makeText(context, "创建成功", Toast.LENGTH_SHORT).show()
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-
+        db.execSQL("drop table if exists Book")
+        db.execSQL("drop table if exists Category")
+        onCreate(db)
     }
-
-
 }
