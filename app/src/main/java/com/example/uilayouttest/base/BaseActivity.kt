@@ -18,6 +18,11 @@ open class BaseActivity:AppCompatActivity() {
         ActivityCollector.addActivity(this)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(receiver)
+    }
+
     override fun onResume() {
         super.onResume()
         val intentFilter = IntentFilter()

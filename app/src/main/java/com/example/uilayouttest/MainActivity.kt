@@ -71,6 +71,10 @@ class MainActivity : BaseActivity() {
         btnFilePersistence.setOnClickListener {
             startActivity(Intent(this, FilePersistenceTestActivity::class.java))
         }
+
+        btnSharedPreferences.setOnClickListener {
+            startActivity(Intent(this, SharedPreferencesTestActivity::class.java))
+        }
     }
 
     override fun onDestroy() {
