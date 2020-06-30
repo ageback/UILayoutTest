@@ -75,6 +75,10 @@ class MainActivity : BaseActivity() {
         btnSharedPreferences.setOnClickListener {
             startActivity(Intent(this, SharedPreferencesTestActivity::class.java))
         }
+
+        btnDatabaseTest.setOnClickListener {
+            startActivity(Intent(this, DatabaseTestActivity::class.java))
+        }
     }
 
     override fun onDestroy() {

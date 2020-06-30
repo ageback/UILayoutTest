@@ -70,4 +70,11 @@
         android:id="@+id/btnSharedPreferences"
         android:textAllCaps="false"
         android:text="SharePreferences"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDatabaseTest"
+        android:textAllCaps="false"
+        android:text="数据库demo"/>
 </LinearLayout>
