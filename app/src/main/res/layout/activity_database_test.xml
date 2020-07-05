@@ -14,4 +14,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnAddDbData"
         android:text="添加数据" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnUpdateDbData"
+        android:text="更新数据" />
 </LinearLayout>

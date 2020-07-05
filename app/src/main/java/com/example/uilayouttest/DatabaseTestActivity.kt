@@ -32,5 +32,12 @@ class DatabaseTestActivity : AppCompatActivity() {
             }
             db.insert("Book", null, values2)
         }
+
+        btnUpdateDbData.setOnClickListener {
+            val db = dbHelper.writableDatabase
+            val values = ContentValues()
+            values.put("price", 10.99)
+            db.update("Book", values, "name = ?", arrayOf("The Da Vinci Code"))
+        }
     }
 }
