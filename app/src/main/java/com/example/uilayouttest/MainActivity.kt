@@ -83,6 +83,11 @@ class MainActivity : BaseActivity() {
         btnMakeCallTest.setOnClickListener {
             startActivity(Intent(this, RuntimePermissionTestActivity::class.java))
         }
+
+        btnReadContacts.setOnClickListener {
+            startActivity(Intent(this, ContactsTestActivity::class.java))
+
+        }
     }
 
     override fun onDestroy() {
