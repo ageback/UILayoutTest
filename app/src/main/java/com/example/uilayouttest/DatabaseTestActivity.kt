@@ -3,6 +3,7 @@ package com.example.uilayouttest
 import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.uilayouttest.database.MyDatabaseHelper
 import kotlinx.android.synthetic.main.activity_database_test.*
 
@@ -38,6 +39,25 @@ class DatabaseTestActivity : AppCompatActivity() {
             val values = ContentValues()
             values.put("price", 10.99)
             db.update("Book", values, "name = ?", arrayOf("The Da Vinci Code"))
+        }
+
+        btnQueryDbData.setOnClickListener {
+            val db = dbHelper.writableDatabase
+            var cursor = db.query("Book", null, null, null, null, null, null)
+            if(cursor.moveToFirst())
+            {
+                do {
+                    val name = cursor.getString(cursor.getColumnIndex("name"))
+                    val author = cursor.getString(cursor.getColumnIndex("author"))
+                    val pages = cursor.getInt(cursor.getColumnIndex("pages"))
+                    val price = cursor.getDouble(cursor.getColumnIndex("price"))
+                    Log.d("DatabaseTestActivity", "book name is $name")
+                    Log.d("DatabaseTestActivity", "book author is $author")
+                    Log.d("DatabaseTestActivity", "book pages is $pages")
+                    Log.d("DatabaseTestActivity", "book price is $price")
+                } while (cursor.moveToNext())
+            }
+            cursor.close()
         }
     }
 }

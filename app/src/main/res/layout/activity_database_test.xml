@@ -20,4 +20,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnUpdateDbData"
         android:text="更新数据" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnQueryDbData"
+        android:text="查询数据" />
 </LinearLayout>
