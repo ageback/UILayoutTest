@@ -79,6 +79,10 @@ class MainActivity : BaseActivity() {
         btnDatabaseTest.setOnClickListener {
             startActivity(Intent(this, DatabaseTestActivity::class.java))
         }
+
+        btnMakeCallTest.setOnClickListener {
+            startActivity(Intent(this, RuntimePermissionTestActivity::class.java))
+        }
     }
 
     override fun onDestroy() {

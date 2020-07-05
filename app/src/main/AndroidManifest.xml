@@ -3,6 +3,7 @@
     package="com.example.uilayouttest">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DatabaseTestActivity"></activity>
+        <activity android:name=".RuntimePermissionTestActivity"></activity>
+        <activity android:name=".DatabaseTestActivity" />
         <activity android:name=".SharedPreferencesTestActivity" />
         <activity android:name=".FilePersistenceTestActivity" />
         <activity android:name=".login.LoginActivity">
