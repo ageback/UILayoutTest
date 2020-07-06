@@ -13,7 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContactsTestActivity"></activity>
+        <provider
+            android:name=".provider.DatabaseProvider"
+            android:authorities="com.example.uilayouttest.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+        <activity android:name=".ContactsTestActivity" />
         <activity android:name=".RuntimePermissionTestActivity" />
         <activity android:name=".DatabaseTestActivity" />
         <activity android:name=".SharedPreferencesTestActivity" />
