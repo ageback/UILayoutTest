@@ -1,12 +1,18 @@
 package com.example.uilayouttest
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.graphics.BitmapFactory
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.app.NotificationCompat
 import com.example.uilayouttest.base.BaseActivity
 import com.example.uilayouttest.chat.ChatActivity
 import com.example.uilayouttest.news.NewsContentActivity
@@ -86,6 +92,33 @@ class MainActivity : BaseActivity() {
 
         btnReadContacts.setOnClickListener {
             startActivity(Intent(this, ContactsTestActivity::class.java))
+
+        }
+
+        val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+        {
+            val channel = NotificationChannel("normal", "Normal", NotificationManager.IMPORTANCE_DEFAULT)
+            manager.createNotificationChannel(channel)
+
+            val channel2 = NotificationChannel("important", "Important", NotificationManager.IMPORTANCE_HIGH)
+            manager.createNotificationChannel(channel2)
+        }
+        btnNotice.setOnClickListener {
+            val intent = Intent(this, ChatActivity::class.java)
+            val pi = PendingIntent.getActivity(this, 0, intent, 0)
+            val notification = NotificationCompat.Builder(this, "important")
+                .setContentTitle("通知标题")
+               // .setContentText("通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容")
+                .setStyle(NotificationCompat.BigTextStyle().bigText("通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容"))
+                .setStyle(NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(resources, R.drawable.big_image)))
+                .setSmallIcon(R.drawable.small_icon)
+                .setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.large_icon))
+                .setContentIntent(pi)
+                .setAutoCancel(true)
+                .build()
+            manager.notify(1, notification)
+
 
         }
     }

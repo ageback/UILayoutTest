@@ -91,4 +91,11 @@
         android:id="@+id/btnReadContacts"
         android:textAllCaps="false"
         android:text="读取联系人"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNotice"
+        android:textAllCaps="false"
+        android:text="测试通知"/>
 </LinearLayout>
