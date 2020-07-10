@@ -118,8 +118,10 @@ class MainActivity : BaseActivity() {
                 .setAutoCancel(true)
                 .build()
             manager.notify(1, notification)
+        }
 
-
+        btnTakePhotoActivity.setOnClickListener {
+            startActivity(Intent(this, CameraAlbumTestActivity::class.java))
         }
     }
 
