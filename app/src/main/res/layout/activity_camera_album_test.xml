@@ -10,6 +10,12 @@
         android:id="@+id/btnTakePhoto"
         android:text="拍照"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFromAlbum"
+        android:text="从相册选择"/>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
