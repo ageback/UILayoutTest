@@ -9,13 +9,11 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.graphics.BitmapFactory
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import com.example.uilayouttest.base.BaseActivity
 import com.example.uilayouttest.chat.ChatActivity
-import com.example.uilayouttest.news.NewsContentActivity
 import com.example.uilayouttest.news.NewsMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -129,7 +127,7 @@ class MainActivity : BaseActivity() {
         }
 
         btnAndroidThreadActivity.setOnClickListener {
-            startActivity(Intent(this, AndroidThreadActivity::class.java))
+            startActivity(Intent(this, ServiceAndThreadActivity::class.java))
 
         }
     }

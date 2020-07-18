@@ -18,7 +18,7 @@
             android:enabled="true"
             android:exported="true"></service>
 
-        <activity android:name=".AndroidThreadActivity" />
+        <activity android:name=".ServiceAndThreadActivity" />
         <activity android:name=".PlayAudioActivity" />
         <activity android:name=".CameraAlbumTestActivity" />
 
