@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CameraAlbumTestActivity"></activity>
+        <activity android:name=".PlayAudioActivity"></activity>
+        <activity android:name=".CameraAlbumTestActivity" />
 
         <provider
             android:name=".provider.DatabaseProvider"
@@ -69,14 +69,13 @@
         <activity android:name=".MainActivity" />
 
         <provider
-            android:authorities="com.example.uilayouttest.fileprovider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.uilayouttest.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true"
-            >
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
     </application>
 

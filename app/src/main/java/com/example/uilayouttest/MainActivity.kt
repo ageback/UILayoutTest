@@ -123,6 +123,10 @@ class MainActivity : BaseActivity() {
         btnTakePhotoActivity.setOnClickListener {
             startActivity(Intent(this, CameraAlbumTestActivity::class.java))
         }
+
+        btnPlayAudioActivity.setOnClickListener {
+            startActivity(Intent(this, PlayAudioActivity::class.java))
+        }
     }
 
     override fun onDestroy() {
