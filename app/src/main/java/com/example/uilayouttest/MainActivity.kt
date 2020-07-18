@@ -127,6 +127,11 @@ class MainActivity : BaseActivity() {
         btnPlayAudioActivity.setOnClickListener {
             startActivity(Intent(this, PlayAudioActivity::class.java))
         }
+
+        btnAndroidThreadActivity.setOnClickListener {
+            startActivity(Intent(this, AndroidThreadActivity::class.java))
+
+        }
     }
 
     override fun onDestroy() {
