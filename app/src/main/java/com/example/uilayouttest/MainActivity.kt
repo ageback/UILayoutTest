@@ -128,6 +128,9 @@ class MainActivity : BaseActivity() {
 
         btnAndroidThreadActivity.setOnClickListener {
             startActivity(Intent(this, ServiceAndThreadActivity::class.java))
+        }
+
+        btnNetworkActivity.setOnClickListener {
 
         }
     }
