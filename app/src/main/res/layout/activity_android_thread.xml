@@ -4,6 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnChangeText"
+        android:text="Handler在线程中更新UI"/>
 
     <Button
         android:layout_width="match_parent"
@@ -17,11 +22,7 @@
         android:id="@+id/btnUnbindMyService"
         android:text="解绑 MyService"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnChangeText"
-        android:text="Handler在线程中更新UI"/>
+
 
     <Button
         android:layout_width="match_parent"
@@ -34,6 +35,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnStopMyService"
         android:text="停止 MyService"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStartIntentService"
+        android:text="启动 IntentService"/>
 
     <TextView
         android:layout_width="wrap_content"

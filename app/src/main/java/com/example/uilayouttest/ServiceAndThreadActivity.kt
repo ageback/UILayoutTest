@@ -9,6 +9,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.IBinder
 import android.os.Message
+import android.util.Log
+import com.example.uilayouttest.service.MyIntentService
 import com.example.uilayouttest.service.MyService
 import kotlinx.android.synthetic.main.activity_android_thread.*
 import kotlin.concurrent.thread
@@ -63,6 +65,12 @@ class ServiceAndThreadActivity : AppCompatActivity() {
 
         btnStopMyService.setOnClickListener {
             stopService(Intent(this, MyService::class.java))
+        }
+
+        btnStartIntentService.setOnClickListener {
+            Log.d("ServiceAndThread", "Thread id is ${Thread.currentThread().name}")
+            val intent = Intent(this, MyIntentService::class.java)
+            startService(intent)
         }
     }
 }

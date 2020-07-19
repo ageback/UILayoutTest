@@ -18,6 +18,9 @@
             android:name=".service.MyService"
             android:enabled="true"
             android:exported="true"></service>
+        <service android:name=".service.MyIntentService"
+            android:exported="true"
+            android:enabled="true"></service>
 
         <activity android:name=".ServiceAndThreadActivity" />
         <activity android:name=".PlayAudioActivity" />
