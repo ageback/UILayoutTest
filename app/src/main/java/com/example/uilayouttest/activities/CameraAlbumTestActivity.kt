@@ -1,4 +1,4 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.core.content.FileProvider
+import com.example.uilayouttest.R
 import kotlinx.android.synthetic.main.activity_camera_album_test.*
 import java.io.File
 

@@ -13,7 +13,7 @@ import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.example.uilayouttest.R
-import com.example.uilayouttest.ServiceAndThreadActivity
+import com.example.uilayouttest.activities.ServiceAndThreadActivity
 
 class MyService : Service() {
     private val mBinder  = DownloadBinder()

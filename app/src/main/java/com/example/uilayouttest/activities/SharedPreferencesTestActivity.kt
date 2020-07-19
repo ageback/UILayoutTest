@@ -1,9 +1,10 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.uilayouttest.R
 import kotlinx.android.synthetic.main.activity_shared_preferences_test.*
 
 class SharedPreferencesTestActivity : AppCompatActivity() {

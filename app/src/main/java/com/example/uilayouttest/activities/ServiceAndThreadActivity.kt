@@ -1,4 +1,4 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import android.content.ComponentName
 import android.content.Context
@@ -10,6 +10,7 @@ import android.os.Handler
 import android.os.IBinder
 import android.os.Message
 import android.util.Log
+import com.example.uilayouttest.R
 import com.example.uilayouttest.service.MyIntentService
 import com.example.uilayouttest.service.MyService
 import kotlinx.android.synthetic.main.activity_android_thread.*

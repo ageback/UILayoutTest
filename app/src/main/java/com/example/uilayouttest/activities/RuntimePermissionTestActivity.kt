@@ -1,4 +1,4 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import android.Manifest
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.uilayouttest.R
 import kotlinx.android.synthetic.main.activity_rumtime_permission_test.*
 
 class RuntimePermissionTestActivity : AppCompatActivity() {

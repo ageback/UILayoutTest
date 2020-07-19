@@ -1,4 +1,4 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uilayouttest.Fruit
+import com.example.uilayouttest.R
 
 class RecyclerViewFruitAdapter(val fruitList:List<Fruit>):
     RecyclerView.Adapter<RecyclerViewFruitAdapter.ViewHolder>()

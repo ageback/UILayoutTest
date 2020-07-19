@@ -1,4 +1,4 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.adapters
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.uilayouttest.Fruit
+import com.example.uilayouttest.R
 
 class ListViewFruitAdapter(activity:Activity, val resourceId: Int, data: List<Fruit>):
     ArrayAdapter<Fruit>(activity, resourceId, data) {

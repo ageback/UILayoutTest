@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,17 +15,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.NetworkTestActivity"></activity>
+
         <service
             android:name=".service.MyService"
             android:enabled="true"
-            android:exported="true"></service>
-        <service android:name=".service.MyIntentService"
-            android:exported="true"
-            android:enabled="true"></service>
+            android:exported="true" />
+        <service
+            android:name=".service.MyIntentService"
+            android:enabled="true"
+            android:exported="true" />
 
-        <activity android:name=".ServiceAndThreadActivity" />
-        <activity android:name=".PlayAudioActivity" />
-        <activity android:name=".CameraAlbumTestActivity" />
+        <activity android:name=".activities.ServiceAndThreadActivity" />
+        <activity android:name=".activities.PlayAudioActivity" />
+        <activity android:name=".activities.CameraAlbumTestActivity" />
 
         <provider
             android:name=".provider.DatabaseProvider"
@@ -32,11 +36,11 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ContactsTestActivity" />
-        <activity android:name=".RuntimePermissionTestActivity" />
-        <activity android:name=".DatabaseTestActivity" />
-        <activity android:name=".SharedPreferencesTestActivity" />
-        <activity android:name=".FilePersistenceTestActivity" />
+        <activity android:name=".activities.ContactsTestActivity" />
+        <activity android:name=".activities.RuntimePermissionTestActivity" />
+        <activity android:name=".activities.DatabaseTestActivity" />
+        <activity android:name=".activities.SharedPreferencesTestActivity" />
+        <activity android:name=".activities.FilePersistenceTestActivity" />
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -72,10 +76,10 @@
 
         <activity android:name=".news.NewsMainActivity" />
         <activity android:name=".news.NewsContentActivity" />
-        <activity android:name=".FragmentTestActivity" />
+        <activity android:name=".activities.FragmentTestActivity" />
         <activity android:name=".chat.ChatActivity" />
-        <activity android:name=".RecyclerViewActivity" />
-        <activity android:name=".ListViewActivity" />
+        <activity android:name=".activities.RecyclerViewActivity" />
+        <activity android:name=".activities.ListViewActivity" />
         <activity android:name=".MainActivity" />
 
         <provider

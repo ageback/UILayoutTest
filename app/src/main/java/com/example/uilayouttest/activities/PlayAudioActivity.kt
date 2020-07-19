@@ -1,8 +1,9 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.uilayouttest.R
 import kotlinx.android.synthetic.main.activity_play_audio.*
 
 class PlayAudioActivity : AppCompatActivity() {

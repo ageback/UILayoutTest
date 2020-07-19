@@ -1,9 +1,10 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.uilayouttest.R
 import kotlinx.android.synthetic.main.activity_file_persistence_test.*
 import java.io.*
 import java.lang.StringBuilder

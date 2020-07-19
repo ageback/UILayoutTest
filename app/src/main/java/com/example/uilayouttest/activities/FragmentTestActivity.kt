@@ -1,8 +1,9 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.uilayouttest.R
 import com.example.uilayouttest.fragmenttest.AnotherRightFragment
 import com.example.uilayouttest.fragmenttest.RightFragment
 import kotlinx.android.synthetic.main.left_fragment.*

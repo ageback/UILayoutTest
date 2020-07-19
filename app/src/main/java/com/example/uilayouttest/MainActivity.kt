@@ -12,6 +12,7 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
+import com.example.uilayouttest.activities.*
 import com.example.uilayouttest.base.BaseActivity
 import com.example.uilayouttest.chat.ChatActivity
 import com.example.uilayouttest.news.NewsMainActivity
@@ -131,6 +132,7 @@ class MainActivity : BaseActivity() {
         }
 
         btnNetworkActivity.setOnClickListener {
+            startActivity(Intent(this, NetworkTestActivity::class.java))
 
         }
     }

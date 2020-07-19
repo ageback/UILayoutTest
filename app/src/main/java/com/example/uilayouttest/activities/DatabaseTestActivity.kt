@@ -1,9 +1,10 @@
-package com.example.uilayouttest
+package com.example.uilayouttest.activities
 
 import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.uilayouttest.R
 import com.example.uilayouttest.database.MyDatabaseHelper
 import kotlinx.android.synthetic.main.activity_database_test.*
 
