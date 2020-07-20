@@ -79,6 +79,7 @@ class NetworkTestActivity : AppCompatActivity() {
                 {
 //                    showResponse(responseData)
 //                    parseXMLWithPull(responseData)
+                    parseJSONWithGSON(responseData)
                 }
             } catch (e: Exception)
             {
