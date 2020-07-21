@@ -4,14 +4,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.uilayouttest.R
+import com.example.uilayouttest.`interface`.HttpCallbackListener
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_network_test.*
+import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.Response
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
 import java.io.BufferedReader
+import java.io.IOException
 import java.io.InputStreamReader
 import java.io.StringReader
 import java.net.HttpURLConnection
@@ -23,11 +27,30 @@ class NetworkTestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_network_test)
         btnSendHttpRequest.setOnClickListener {
-            sendRequestWithHttpURLConnection()
+//            sendRequestWithHttpURLConnection()
+            HttpUtil.sendHttpRequest("http://oa.wesoft.net.cn/get_data.json", object: HttpCallbackListener{
+                override fun onFinish(response: String) {
+                    parseJSONWithGSON(response)
+                }
+
+                override fun onError(e: Exception) {
+                    e.printStackTrace()
+                }
+
+            })
         }
 
         btnSendOkHttpRequest.setOnClickListener {
-            sendRequestWithOkHttp()
+//            sendRequestWithOkHttp()
+            HttpUtil.sendOkHttpRequest("http://oa.wesoft.net.cn/get_data.json", object: okhttp3.Callback{
+                override fun onResponse(call: Call, response: Response) {
+                    parseJSONWithGSON(response.body!!.string())
+                }
+
+                override fun onFailure(call: Call, e: IOException) {
+                    e.printStackTrace()
+                }
+            })
         }
     }
 
@@ -135,4 +158,41 @@ class NetworkTestActivity : AppCompatActivity() {
     }
 
     class App(val id: String, val name: String, val version: String)
+
+    object HttpUtil {
+        fun sendHttpRequest(address: String, listener: HttpCallbackListener) {
+            thread {
+                var connection: HttpURLConnection? = null
+                try {
+                    val response = StringBuilder()
+                    val url = URL(address)
+                    connection = url.openConnection() as HttpURLConnection
+                    connection.connectTimeout = 8000
+                    connection.readTimeout = 8000
+                    val input = connection.inputStream
+                    val reader = BufferedReader(InputStreamReader(input))
+                    reader.use {
+                        reader.forEachLine {
+                            response.append(it)
+                        }
+                    }
+                    listener.onFinish(response.toString())
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    listener.onError(e)
+                } finally {
+                    connection?.disconnect()
+                }
+            }
+        }
+
+        fun sendOkHttpRequest(address: String, callback: okhttp3.Callback)
+        {
+            val client = OkHttpClient()
+            val request = Request.Builder()
+                .url(address)
+                .build()
+            client.newCall(request).enqueue(callback)
+        }
+    }
 }
