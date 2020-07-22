@@ -63,31 +63,37 @@ class NetworkTestActivity : AppCompatActivity() {
         }
 
         btnGetAppData.setOnClickListener {
-            val retrofit = Retrofit.Builder()
-                .baseUrl("http://oa.wesoft.net.cn/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-            val appService = retrofit.create(AppService::class.java)
-            appService.getAppData().enqueue(object: Callback<List<App>>{
-                override fun onResponse(
-                    call: retrofit2.Call<List<App>>,
-                    response: retrofit2.Response<List<App>>
-                ) {
-                    val list = response.body()
-                    if(list != null)
-                    {
-                        for(app in list){
-                            Log.d("NetworkTestActivity", "id is ${app.id}")
-                            Log.d("NetworkTestActivity", "name is ${app.name}")
-                            Log.d("NetworkTestActivity", "version is ${app.version}")
+            try {
+                val retrofit = Retrofit.Builder()
+                    .baseUrl("http://oa.wesoft.net.cn/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
+                val appService = retrofit.create(AppService::class.java)
+                appService.getAppData().enqueue(object: Callback<List<App>>{
+                    override fun onResponse(
+                        call: retrofit2.Call<List<App>>,
+                        response: retrofit2.Response<List<App>>
+                    ) {
+                        val list = response.body()
+                        if(list != null)
+                        {
+                            for(app in list){
+                                Log.d("NetworkTestActivity", "id is ${app.id}")
+                                Log.d("NetworkTestActivity", "name is ${app.name}")
+                                Log.d("NetworkTestActivity", "version is ${app.version}")
+                            }
                         }
                     }
-                }
 
-                override fun onFailure(call: retrofit2.Call<List<App>>, t: Throwable) {
-                    t.printStackTrace()
-                }
-            })
+                    override fun onFailure(call: retrofit2.Call<List<App>>, t: Throwable) {
+                        t.printStackTrace()
+                    }
+                })
+            }catch (e: Exception)
+            {
+                e.printStackTrace();
+            }
+
         }
     }
 
