@@ -4,17 +4,21 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.example.uilayouttest.MainActivity
 import com.example.uilayouttest.R
 import com.example.uilayouttest.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : BaseActivity() {
     private val TAG_REMEMBER_PASS =  "remember_password"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        setSupportActionBar(toolbar)
 
         val prefs = getPreferences(Context.MODE_PRIVATE)
         val isRemember = prefs.getBoolean(TAG_REMEMBER_PASS, false)
@@ -50,5 +54,19 @@ class LoginActivity : BaseActivity() {
                 Toast.makeText(this, "account or password is invalid", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.mnuBackup -> Toast.makeText(this, "你点击了备份", Toast.LENGTH_SHORT).show()
+            R.id.mnuDelete -> Toast.makeText(this, "你点击了删除", Toast.LENGTH_SHORT).show()
+            R.id.mnuSettings -> Toast.makeText(this, "你点击了设置", Toast.LENGTH_SHORT).show()
+        }
+        return true
     }
 }

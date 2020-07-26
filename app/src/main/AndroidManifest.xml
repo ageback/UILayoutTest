@@ -42,7 +42,7 @@
         <activity android:name=".activities.DatabaseTestActivity" />
         <activity android:name=".activities.SharedPreferencesTestActivity" />
         <activity android:name=".activities.FilePersistenceTestActivity" />
-        <activity android:name=".login.LoginActivity">
+        <activity android:name=".login.LoginActivity" android:label="安卓多功能演示app">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
