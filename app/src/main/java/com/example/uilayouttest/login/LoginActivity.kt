@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.view.GravityCompat
 import com.example.uilayouttest.MainActivity
 import com.example.uilayouttest.R
 import com.example.uilayouttest.base.BaseActivity
@@ -19,6 +20,10 @@ class LoginActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         setSupportActionBar(toolbar)
+        supportActionBar?.let {
+            it.setDisplayHomeAsUpEnabled(true)
+            it.setHomeAsUpIndicator(R.drawable.ic_menu)
+        }
 
         val prefs = getPreferences(Context.MODE_PRIVATE)
         val isRemember = prefs.getBoolean(TAG_REMEMBER_PASS, false)
@@ -63,6 +68,7 @@ class LoginActivity : BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
+            android.R.id.home -> drawerLayout.openDrawer(GravityCompat.START)
             R.id.mnuBackup -> Toast.makeText(this, "你点击了备份", Toast.LENGTH_SHORT).show()
             R.id.mnuDelete -> Toast.makeText(this, "你点击了删除", Toast.LENGTH_SHORT).show()
             R.id.mnuSettings -> Toast.makeText(this, "你点击了设置", Toast.LENGTH_SHORT).show()
