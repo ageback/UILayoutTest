@@ -24,6 +24,11 @@ class LoginActivity : BaseActivity() {
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeAsUpIndicator(R.drawable.ic_menu)
         }
+        navView.setCheckedItem(R.id.navCall)
+        navView.setNavigationItemSelectedListener {
+            drawerLayout.closeDrawers()
+            true
+        }
 
         val prefs = getPreferences(Context.MODE_PRIVATE)
         val isRemember = prefs.getBoolean(TAG_REMEMBER_PASS, false)
