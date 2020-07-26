@@ -24,6 +24,9 @@ class LoginActivity : BaseActivity() {
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeAsUpIndicator(R.drawable.ic_menu)
         }
+        fab.setOnClickListener {
+            Toast.makeText(this,"FAB clicked", Toast.LENGTH_SHORT).show()
+        }
         navView.setCheckedItem(R.id.navCall)
         navView.setNavigationItemSelectedListener {
             drawerLayout.closeDrawers()
