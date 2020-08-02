@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MaterialTestActivity"></activity>
+        <activity android:name=".activities.FruitActivity" android:theme="@style/FruitActivityTheme"></activity>
+        <activity android:name=".activities.MaterialTestActivity" />
         <activity android:name=".activities.NetworkTestActivity" />
 
         <service
