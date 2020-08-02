@@ -135,6 +135,11 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this, NetworkTestActivity::class.java))
 
         }
+
+        btnMaterialDesign.setOnClickListener {
+            startActivity(Intent(this, MaterialTestActivity::class.java))
+
+        }
     }
 
     override fun onDestroy() {

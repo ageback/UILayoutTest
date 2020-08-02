@@ -140,6 +140,13 @@
             android:id="@+id/btnNetworkActivity"
             android:textAllCaps="false"
             android:text="网络"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMaterialDesign"
+            android:textAllCaps="false"
+            android:text="材质设计"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

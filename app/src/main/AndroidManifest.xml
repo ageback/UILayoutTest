@@ -12,11 +12,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/network_config">
-        <activity android:name=".activities.NetworkTestActivity"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MaterialTestActivity"></activity>
+        <activity android:name=".activities.NetworkTestActivity" />
 
         <service
             android:name=".service.MyService"
@@ -42,7 +43,9 @@
         <activity android:name=".activities.DatabaseTestActivity" />
         <activity android:name=".activities.SharedPreferencesTestActivity" />
         <activity android:name=".activities.FilePersistenceTestActivity" />
-        <activity android:name=".login.LoginActivity" android:label="安卓多功能演示app">
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="安卓多功能演示app">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
