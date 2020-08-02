@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_login.fab
 import kotlinx.android.synthetic.main.activity_login.navView
 import kotlinx.android.synthetic.main.activity_login.toolbar
 import kotlinx.android.synthetic.main.activity_material_test.*
+import kotlin.concurrent.thread
 
 class MaterialTestActivity : AppCompatActivity() {
 
@@ -60,6 +61,22 @@ class MaterialTestActivity : AppCompatActivity() {
         recyclerView2.layoutManager = layoutManager
         val adapter = MDFruitAdapter(this, fruitList)
         recyclerView2.adapter = adapter
+        swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary)
+        swipeRefreshLayout.setOnRefreshListener {
+            refreshFruits(adapter)
+        }
+    }
+
+    private fun refreshFruits(adapter:MDFruitAdapter)
+    {
+        thread {
+            Thread.sleep(2000)
+            runOnUiThread {
+                initFruits()
+                adapter.notifyDataSetChanged()
+                swipeRefreshLayout.isRefreshing = false
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
