@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.uilayouttest.Fruit
 import com.example.uilayouttest.R
 import com.example.uilayouttest.adapters.MDFruitAdapter
+import com.example.uilayouttest.utils.showSnackbar
+import com.example.uilayouttest.utils.showToast
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.drawerLayout
@@ -44,10 +46,19 @@ class MaterialTestActivity : AppCompatActivity() {
             it.setHomeAsUpIndicator(R.drawable.ic_menu)
         }
         fab.setOnClickListener {
-            view -> Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
-                .setAction("Undo") {
-                Toast.makeText(this, "Data Restored", Toast.LENGTH_SHORT).show()
-            }.show()
+//            view -> Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
+//                .setAction("Undo") {
+//                Toast.makeText(this, "Data Restored", Toast.LENGTH_SHORT).show()
+//            }.show()
+          view ->
+            run {
+                view.showSnackbar(
+                    "数据已删除",
+                    "撤销",
+                    Snackbar.LENGTH_SHORT,
+                    { "数据已恢复".showToast(this) })
+            }
+
         }
 
         navView.setCheckedItem(R.id.navCall)
