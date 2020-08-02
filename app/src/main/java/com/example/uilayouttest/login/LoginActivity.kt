@@ -11,6 +11,7 @@ import androidx.core.view.GravityCompat
 import com.example.uilayouttest.MainActivity
 import com.example.uilayouttest.R
 import com.example.uilayouttest.base.BaseActivity
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,8 +26,13 @@ class LoginActivity : BaseActivity() {
             it.setHomeAsUpIndicator(R.drawable.ic_menu)
         }
         fab.setOnClickListener {
-            Toast.makeText(this,"FAB clicked", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this,"FAB clicked", Toast.LENGTH_SHORT).show()
+            view -> Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
+            .setAction("Undo") {
+                Toast.makeText(this, "Data Restored", Toast.LENGTH_SHORT).show()
+            }.show()
         }
+
         navView.setCheckedItem(R.id.navCall)
         navView.setNavigationItemSelectedListener {
             drawerLayout.closeDrawers()
