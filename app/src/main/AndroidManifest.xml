@@ -16,7 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.FruitActivity" android:theme="@style/FruitActivityTheme"></activity>
+        <activity android:name=".activities.WebViewActivity2"></activity>
+        <activity android:name=".activities.WebViewActivity1" />
+        <activity
+            android:name=".activities.FruitActivity"
+            android:theme="@style/FruitActivityTheme" />
         <activity android:name=".activities.MaterialTestActivity" />
         <activity android:name=".activities.NetworkTestActivity" />
 

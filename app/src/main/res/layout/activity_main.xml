@@ -22,131 +22,139 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnListView"
-            android:textAllCaps="false"
-            android:text="ListView Demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnRecyclerView"
-            android:textAllCaps="false"
-            android:text="RecyclerView Demo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnWebView"
+                android:textAllCaps="false"
+                android:text="WebView Demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnChatActivity"
-            android:textAllCaps="false"
-            android:text="Chat Demo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnListView"
+                android:textAllCaps="false"
+                android:text="ListView Demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnFragActivity"
-            android:textAllCaps="false"
-            android:text="Fragment Demo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRecyclerView"
+                android:textAllCaps="false"
+                android:text="RecyclerView Demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnNewsActivity"
-            android:textAllCaps="false"
-            android:text="News Demo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnChatActivity"
+                android:textAllCaps="false"
+                android:text="Chat Demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnSendMyBroadcast"
-            android:textAllCaps="false"
-            android:text="发送My广播"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnFragActivity"
+                android:textAllCaps="false"
+                android:text="Fragment Demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnForceOffline"
-            android:textAllCaps="false"
-            android:text="强制下线"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNewsActivity"
+                android:textAllCaps="false"
+                android:text="News Demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnFilePersistence"
-            android:textAllCaps="false"
-            android:text="文件读写"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSendMyBroadcast"
+                android:textAllCaps="false"
+                android:text="发送My广播"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnSharedPreferences"
-            android:textAllCaps="false"
-            android:text="SharePreferences"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnForceOffline"
+                android:textAllCaps="false"
+                android:text="强制下线"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnDatabaseTest"
-            android:textAllCaps="false"
-            android:text="数据库demo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnFilePersistence"
+                android:textAllCaps="false"
+                android:text="文件读写"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnMakeCallTest"
-            android:textAllCaps="false"
-            android:text="打电话测试"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSharedPreferences"
+                android:textAllCaps="false"
+                android:text="SharePreferences"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnReadContacts"
-            android:textAllCaps="false"
-            android:text="读取联系人"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDatabaseTest"
+                android:textAllCaps="false"
+                android:text="数据库demo"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnNotice"
-            android:textAllCaps="false"
-            android:text="测试通知"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnMakeCallTest"
+                android:textAllCaps="false"
+                android:text="打电话测试"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnTakePhotoActivity"
-            android:textAllCaps="false"
-            android:text="拍照显示"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnReadContacts"
+                android:textAllCaps="false"
+                android:text="读取联系人"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnPlayAudioActivity"
-            android:textAllCaps="false"
-            android:text="播放音频"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNotice"
+                android:textAllCaps="false"
+                android:text="测试通知"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnAndroidThreadActivity"
-            android:textAllCaps="false"
-            android:text="Android线程"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnTakePhotoActivity"
+                android:textAllCaps="false"
+                android:text="拍照显示"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnNetworkActivity"
-            android:textAllCaps="false"
-            android:text="网络"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnPlayAudioActivity"
+                android:textAllCaps="false"
+                android:text="播放音频"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnMaterialDesign"
-            android:textAllCaps="false"
-            android:text="材质设计"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAndroidThreadActivity"
+                android:textAllCaps="false"
+                android:text="Android线程"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNetworkActivity"
+                android:textAllCaps="false"
+                android:text="网络"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnMaterialDesign"
+                android:textAllCaps="false"
+                android:text="材质设计"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
